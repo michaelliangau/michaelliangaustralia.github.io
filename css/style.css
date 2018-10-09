@@ -1,0 +1,36 @@
+input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=url]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #EF5350 !important;
+    box-shadow: 0 1px 0 0 #EF5350 !important;
+}
+
+.md-form label.active {
+    color:#EF5350 !important;
+}
+
+.applicationFormFooter {
+    background: #34495E;
+    margin-bottom: 0px;
+    height: 8vh;
+    margin-top: 40px;
+}
+
+.applicationFormHeader {
+    background: #2F4F4E;
+    margin-bottom: 0;
+    height: 8vh;
+}
+@media (max-width: 325px) {
+    .phoneMargin {
+        margin:0 30px !important;
+    }
+    .fishDown {
+        margin-top: 15%;
+    }
+  }
+@media (max-width: 480px) {
+    .phoneMargin {
+        margin:0 30px !important;
+        text-align:center;
+    }
+  }
+
