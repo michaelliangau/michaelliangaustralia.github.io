@@ -17,7 +17,7 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 .applicationFormHeader {
     background: #2F4F4E;
     margin-bottom: 0;
-    height: 8vh;
+    height: 10vh;
 }
 @media (max-width: 325px) {
     .phoneMargin {
