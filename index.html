@@ -59,7 +59,8 @@
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br>
                     <p class="phoneMargin" style="color:white">Project Malin is software built for all of your
-                        society's leadership recruitment. We've built an application to automate email sending and interview scheduling to ultimately replace the G Suite mess that
+                        society's leadership recruitment. We've built an application to automate email sending and
+                        interview scheduling to ultimately replace the G Suite mess that
                         all societies deal with.
                         <br><br>
 
@@ -79,8 +80,10 @@
                         <button class="btn btn-rounded" style="background: #26a69a">Test Project Malin</button></a>
                     <br>
                     <p class="phoneMargin" style="color:white">
-                        We love your feedback and this will forever be a work in progress to continuously make your recruitment experience better. Get in touch at <a style="color:#26a69a" href="mailto:michaelliang15@gmail.com" target="_blank">Michael Liang</a>.
-                        
+                        We love your feedback and this will forever be a work in progress to continuously make your
+                        recruitment experience better. Get in touch at <a style="color:#26a69a" href="mailto:michaelliang15@gmail.com"
+                            target="_blank">Michael Liang</a>.
+
                     </p>
                 </div>
             </div>
@@ -99,7 +102,8 @@
                 <!-- Checkout -->
 
                 <!-- Load Stripe.js on your website. -->
-                <p style="color:white" class="phoneMargin">We're running a limited early adopters plan at $29/year if you purchase by the 28th of February 2019.</p>
+                <p style="color:white" class="phoneMargin">We're running a limited early adopters plan at $29/year if
+                    you purchase by the 28th of February 2019.</p>
                 <br>
                 <p style="color:white" class="phoneMargin">On our early adopters plan you will receive:
                     <br>
@@ -110,14 +114,15 @@
                     I love this! Shut up and take my money.</p>
                 <br>
 
-<script src="https://js.stripe.com/v3"></script>
+                <script src="https://js.stripe.com/v3"></script>
 
-<!-- Create a button that your customers click to complete their purchase. -->
-<button id="checkout-button" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px;">Secure Checkout</button>
-<div id="error-message"></div>
+                <!-- Create a button that your customers click to complete their purchase. -->
+                <button id="checkout-button" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px;">Purchase
+                    Subscription</button>
+                <div id="error-message"></div>
 
-<script>
-  var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
+                <script>
+                    var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
     betas: ['checkout_beta_4']
   });
 
@@ -147,7 +152,7 @@
 
 
 
-<!-- Mailing -->
+                <!-- Mailing -->
                 <br>
                 <p style="color:white" class="phoneMargin">Join our mailing list for more in-group updates and offers!</p>
 
@@ -196,7 +201,7 @@
             <!-- </div> -->
         </div>
     </div>
-    <!-- Second row -->
+    <!-- Trusted by section -->
     <div class="row">
 
         <h2 style="margin:20px auto">Trusted by</h2>
@@ -218,6 +223,42 @@
         <div class="col-md-1"></div>
     </div>
 
+    <!-- Contact form section -->
+    <div class="row" style="background:#2F4F4E">
+        <div class="col-md-4 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center">
+            <br>
+            <h2 style="color:white">Contact Us</h2>
+            <form action="https://formspree.io/michaelliang15@gmail.com" method="POST" />
+
+
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-name" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-name" style="color:white">Name</label>
+                </div>
+            </div>
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-email" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-email" style="color:white">Email</label>
+                </div>
+            </div>
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-message" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-message" style="color:white">Message</label>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-rounded" style="background: #26a69a">Submit</button>
+            </form>
+            <br>
+        </div>
+        <div class="col-md-4 col-sm-auto"></div>
+
+    </div>
 
     <!-- Footer -->
     <div class="row applicationFormFooter">

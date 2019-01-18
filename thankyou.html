@@ -3,9 +3,9 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74664112-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74664112-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
@@ -15,7 +15,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Project Malin</title>
+    <title>Project Malin - Society Recruitment</title>
+
+    <!-- Facebook thumbnail -->
+    <link rel="image_src" href="http://projectmalin.me/img/FB.png">
+
+    <!-- Facebook open graph -->
+    <meta property="og:image" content="http://projectmalin.me/img/FB.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
 
     <!-- Favicon -->
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
@@ -46,27 +55,36 @@
             <!-- Start your project here-->
             <div style="height: 100vh">
                 <div class="flex-center flex-column">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9oJywBytems" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9oJywBytems" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br>
-                    <p class="phoneMargin" style="color:white">Project Malin is software built for all of your society's leadership recruitment. We want to replace the G Suite mess that
-                        most societies deal with.
+                    <p class="phoneMargin" style="color:white">Project Malin is software built for all of your
+                        society's leadership recruitment. We've built an application to automate email sending and
+                        interview scheduling to ultimately replace the G Suite mess that
+                        all societies deal with.
                         <br><br>
-                        The application is currently undergoing rapid development and beta testing and will be
-                        launching in January 2019 in time for tri/semester 1 recruitment.
+
+                        Project Malin is proudly developed and maintained by <a style="color:#26a69a" href="https://www.linkedin.com/in/michaelliang15/"
+                            target="_blank">Michael Liang</a>, <a style="color:#26a69a" href="https://www.linkedin.com/in/mackenzie-alexander-8a7ab0142/"
+                            target="_blank">Mackenzie Alexander</a> and EsterBelle Cao.
                         <br><br>
-                        Project Malin is proudly built and maintained by <a style="color:#EF5350" href="https://www.linkedin.com/in/michaelliang15/"
-                            target="_blank">Michael Liang</a>.
-                        <br><br>
-                        Test out a new recruiting experience with test credentials:
+                        Test out a new recruiting experience with these test credentials:
                         <br>
                         Email: Tommy@gmail.com
                         <br>
                         Password: Tommy
+
                     </p>
                     <br>
                     <a href="http://projectmalinapp.me/" target="_blank">
-                        <button class="btn btn-rounded" style="background: #EF5350">Enter Project Malin App</button></a>
+                        <button class="btn btn-rounded" style="background: #26a69a">Test Project Malin</button></a>
                     <br>
+                    <p class="phoneMargin" style="color:white">
+                        We love your feedback and this will forever be a work in progress to continuously make your
+                        recruitment experience better. Get in touch at <a style="color:#26a69a" href="mailto:michaelliang15@gmail.com"
+                            target="_blank">Michael Liang</a>.
+
+                    </p>
                 </div>
             </div>
 
@@ -81,10 +99,64 @@
                 <h5 class="animated fadeIn mb-3" style="color:white">Society recruitment software</h5>
 
                 <br>
-                <p style="color:white" class="phoneMargin">Sign up here to be notified when Project Malin enters General Release.</p>
+                <!-- Checkout -->
+
+                <!-- Load Stripe.js on your website. -->
+                <p style="color:white" class="phoneMargin">We're running a limited early adopters plan at $29/year if
+                    you purchase by the 28th of February 2019.</p>
+                <br>
+                <p style="color:white" class="phoneMargin">On our early adopters plan you will receive:
+                    <br>
+                    - Unlimited users<br>
+                    - Unlimited recruitment drives<br>
+                    - Co-creation of new features
+                    <br><br>
+                    I love this! Shut up and take my money.</p>
+                <br>
+
+                <script src="https://js.stripe.com/v3"></script>
+
+                <!-- Create a button that your customers click to complete their purchase. -->
+                <button id="checkout-button" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px;">Purchase
+                    Subscription</button>
+                <div id="error-message"></div>
+
+                <script>
+                    var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
+    betas: ['checkout_beta_4']
+  });
+
+  var checkoutButton = document.getElementById('checkout-button');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{plan: 'plan_EKvaCnNTY5rnPc', quantity: 1}],
+
+      // Note that it is not guaranteed your customers will be redirected to this
+      // URL *100%* of the time, it's possible that they could e.g. close the
+      // tab between form submission and the redirect.
+      successUrl: 'http://projectmalin.me/success',
+      cancelUrl: 'http://projectmalin.me/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+</script>
+
+
+
+                <!-- Mailing -->
+                <br>
+                <p style="color:white" class="phoneMargin">Join our mailing list for more in-group updates and offers!</p>
                 <br>
                 <p style="color:#EF5350" class="phoneMargin">You have been subscribed.</p>
-
 
                 <!-- Begin Mailchimp Signup Form -->
                 <form action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
@@ -100,10 +172,11 @@
                     <!-- Material input -->
                     <div class="mc-field-group">
                         <div class="md-form">
-                            <input type="text" value="" name="SOCIETY" class="required form-control" id="mce-SOCIETY" style="width:30vh;color:white">
+                            <input type="text" value="" name="SOCIETY" class="required form-control" id="mce-SOCIETY"
+                                style="width:30vh;color:white">
                             <label for="mce-SOCIETY" style="color:white">Society</label>
                         </div>
-                    </div>                    
+                    </div>
                     <!-- Material input -->
                     <div class="mc-field-group">
                         <div class="md-form">
@@ -123,14 +196,14 @@
 
                     <div style="text-align:center">
                         <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-rounded"
-                            style="background: #EF5350;margin-bottom: 30px;">Sign Up</button>
+                            style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
                     </div>
                 </form>
             </div>
             <!-- </div> -->
         </div>
     </div>
-    <!-- Second row -->
+    <!-- Trusted by section -->
     <div class="row">
 
         <h2 style="margin:20px auto">Trusted by</h2>
@@ -139,14 +212,55 @@
     <!-- Third Row -->
     <div class="row" style="background:white">
         <div class="col-md-1"></div>
-        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="http://unswbsoc.com/" target="_blank"><img style="max-width:80%" src="img/bsoc.png"></a></div>
-        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="" target="_blank"><img style="max-width:55%" src="img/ucc.png"></a></div>
-        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://www.gcg.org.au/" target="_blank"><img style="max-width:80%; margin-top:20px" src="img/logo-gcg.png"></a></div>
-        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="http://www.bitsa.org.au/" target="_blank"><img style="max-width:60%" src="img/bitsa.png"></a></div>
-        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/unsw.wit/" target="_blank"><img style="max-width:80%" src="img/wit.jpg"></a></div>
+        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="http://unswbsoc.com/"
+                target="_blank"><img style="max-width:80%" src="img/bsoc.png"></a></div>
+        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="" target="_blank"><img
+                    style="max-width:55%" src="img/ucc.png"></a></div>
+        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://www.gcg.org.au/"
+                target="_blank"><img style="max-width:80%; margin-top:20px" src="img/logo-gcg.png"></a></div>
+        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="http://www.bitsa.org.au/"
+                target="_blank"><img style="max-width:60%" src="img/bitsa.png"></a></div>
+        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/unsw.wit/" target="_blank"><img
+                    style="max-width:80%" src="img/wit.jpg"></a></div>
         <div class="col-md-1"></div>
     </div>
 
+    <!-- Contact form section -->
+    <div class="row" style="background:#2F4F4E">
+        <div class="col-md-4 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center">
+            <br>
+            <h2 style="color:white">Contact Us</h2>
+            <form action="https://formspree.io/michaelliang15@gmail.com" method="POST" />
+
+
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-name" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-name" style="color:white">Name</label>
+                </div>
+            </div>
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-email" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-email" style="color:white">Email</label>
+                </div>
+            </div>
+            <div class="mc-field-group" style="padding-left:10vh">
+                <div class="md-form">
+                    <input type="text" value="" name="cu-message" class="required form-control" style="width:30vh;color:white">
+                    <label for="cu-message" style="color:white">Message</label>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-rounded" style="background: #26a69a">Submit</button>
+            </form>
+            <br>
+        </div>
+        <div class="col-md-4 col-sm-auto"></div>
+
+    </div>
 
     <!-- Footer -->
     <div class="row applicationFormFooter">

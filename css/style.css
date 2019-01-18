@@ -11,7 +11,6 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     background: #34495E;
     margin-bottom: 0px;
     height: 8vh;
-    margin-top: 40px;
 }
 
 .applicationFormHeader {
