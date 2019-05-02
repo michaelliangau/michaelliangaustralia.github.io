@@ -8,7 +8,7 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 }
 
 .applicationFormFooter {
-    background: #34495E;
+    background: #2F4F4E;
     margin-bottom: 0px;
     height: 8vh;
 }
@@ -32,4 +32,3 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
         text-align:center;
     }
   }
-

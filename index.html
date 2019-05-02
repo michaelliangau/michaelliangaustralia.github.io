@@ -6,11 +6,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74664112-7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-74664112-7');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-74664112-7');
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,7 +45,8 @@
 <body>
     <!-- Header -->
     <div class="row applicationFormHeader">
-        <a style="margin: 0 auto;" href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
+        <a style="margin: 0 auto;"
+            href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
             target="_blank">
             <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png">
         </a>
@@ -56,17 +60,13 @@
             <div style="height: 100vh">
                 <div class="flex-center flex-column">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9oJywBytems" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <br>
                     <p class="phoneMargin" style="color:white">Project Malin is software built for all of your
                         society's leadership recruitment. We've built an application to automate email sending and
                         interview scheduling to ultimately replace the G Suite mess that
                         all societies deal with.
-                        <br><br>
-
-                        Project Malin is proudly developed and maintained by <a style="color:#26a69a" href="https://www.linkedin.com/in/michaelliang15/"
-                            target="_blank">Michael Liang</a>, <a style="color:#26a69a" href="https://www.linkedin.com/in/mackenzie-alexander-8a7ab0142/"
-                            target="_blank">Mackenzie Alexander</a> and EsterBelle Cao.
                         <br><br>
                         Test out a new recruiting experience with these test credentials:
                         <br>
@@ -81,8 +81,8 @@
                     <br>
                     <p class="phoneMargin" style="color:white">
                         We love your feedback and this will forever be a work in progress to continuously make your
-                        recruitment experience better. Get in touch at <a style="color:#26a69a" href="mailto:michaelliang15@gmail.com"
-                            target="_blank">Michael Liang</a>.
+                        recruitment experience better. Get in touch at <a style="color:#26a69a"
+                            href="mailto:michaelliang15@gmail.com" target="_blank">Michael Liang</a>.
 
                     </p>
                 </div>
@@ -92,78 +92,78 @@
         <div class="col-md-1 col-sm-auto"></div>
 
         <!-- Second Half -->
-        <div class="col-md-6 col-sm-10">
+        <div class="col-md-1 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-10">
             <!-- <div style="height: 100vh"> -->
             <div class="flex-center flex-column">
                 <img class="fishDown" src="img/ProjectMalinLogo.png" style="max-width:100%">
                 <h5 class="animated fadeIn mb-3" style="color:white">Society recruitment software</h5>
 
                 <br>
-                <!-- Checkout -->
+                <p style="color:white" class="phoneMargin">Our pricing is flat at $59/year and you will receive
+                    unlimited access to our application no matter if you have 5 or 500 users. You will also
+                    automatically receive new application updates.
+                </p>
+                <br>
 
                 <!-- Load Stripe.js on your website. -->
-                <p style="color:white" class="phoneMargin">We're running a limited early adopters plan at $29/year if
-                    you purchase by the 28th of February 2019.</p>
-                <br>
-                <p style="color:white" class="phoneMargin">On our early adopters plan you will receive:
-                    <br>
-                    - Unlimited users<br>
-                    - Unlimited recruitment drives<br>
-                    - Co-creation of new features
-                    <br><br>
-                    I love this! Shut up and take my money.</p>
-                <br>
-
                 <script src="https://js.stripe.com/v3"></script>
 
                 <!-- Create a button that your customers click to complete their purchase. -->
-                <button id="checkout-button" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px;">Purchase
+                <button id="checkout-button" class="btn btn-rounded"
+                    style="background: #EF5350;margin-bottom: 30px;">Purchase
                     Subscription</button>
                 <div id="error-message"></div>
 
                 <script>
                     var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
-    betas: ['checkout_beta_4']
-  });
+                        betas: ['checkout_beta_4']
+                    });
 
-  var checkoutButton = document.getElementById('checkout-button');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{plan: 'plan_EKvaCnNTY5rnPc', quantity: 1}],
+                    var checkoutButton = document.getElementById('checkout-button');
+                    checkoutButton.addEventListener('click', function () {
+                        // When the customer clicks on the button, redirect
+                        // them to Checkout.
+                        stripe.redirectToCheckout({
+                                items: [{
+                                    plan: 'plan_EKvaCnNTY5rnPc',
+                                    quantity: 1
+                                }],
 
-      // Note that it is not guaranteed your customers will be redirected to this
-      // URL *100%* of the time, it's possible that they could e.g. close the
-      // tab between form submission and the redirect.
-      successUrl: 'http://projectmalin.me/success',
-      cancelUrl: 'http://projectmalin.me/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-</script>
+                                // Note that it is not guaranteed your customers will be redirected to this
+                                // URL *100%* of the time, it's possible that they could e.g. close the
+                                // tab between form submission and the redirect.
+                                successUrl: 'http://projectmalin.me/success',
+                                cancelUrl: 'http://projectmalin.me/canceled',
+                            })
+                            .then(function (result) {
+                                if (result.error) {
+                                    // If `redirectToCheckout` fails due to a browser or network
+                                    // error, display the localized error message to your customer.
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                            });
+                    });
+                </script>
 
 
 
                 <!-- Mailing -->
                 <br>
-                <p style="color:white" class="phoneMargin">Join our mailing list for more in-group updates and offers!</p>
+                <p style="color:white" class="phoneMargin">Join our mailing list for more in-group updates and offers!
+                </p>
 
                 <!-- Begin Mailchimp Signup Form -->
-                <form action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate phoneMargin"
-                    novalidate>
+                <form
+                    action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                    class="validate phoneMargin" novalidate>
                     <!-- Material input -->
                     <div class="mc-field-group">
                         <div class="md-form">
-                            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME" style="width:30vh;color:white">
+                            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME"
+                                style="width:30vh;color:white">
                             <label for="mce-FNAME" style="color:white">First Name</label>
                         </div>
                     </div>
@@ -189,42 +189,263 @@
                         <div class="response" id="mce-success-response" style="display:none"></div>
                     </div>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_00845a95e6ebcd24517ea7383_1a662a599e"
-                            tabindex="-1" value=""></div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_00845a95e6ebcd24517ea7383_1a662a599e" tabindex="-1" value=""></div>
 
                     <div style="text-align:center">
-                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-rounded"
-                            style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                            class="btn btn-rounded" style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
                     </div>
                 </form>
             </div>
-            <!-- </div> -->
         </div>
+        <div class="col-md-1 col-sm-auto"></div>
     </div>
+
     <!-- Trusted by section -->
     <div class="row">
-
-        <h2 style="margin:20px auto">Trusted by</h2>
+        <h2 style="margin:20px auto">Our early adopters</h2>
     </div>
 
-    <!-- Third Row -->
     <div class="row" style="background:white">
         <div class="col-md-1"></div>
         <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="http://unswbsoc.com/"
-                target="_blank"><img style="max-width:80%" src="img/bsoc.png"></a></div>
+                target="_blank"><img style="max-width:80%; margin-top:20px" src="img/bsoc.png"></a></div>
         <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="" target="_blank"><img
                     style="max-width:55%" src="img/ucc.png"></a></div>
-        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://www.gcg.org.au/"
-                target="_blank"><img style="max-width:80%; margin-top:20px" src="img/logo-gcg.png"></a></div>
+        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://unswengsoc.com/"
+                target="_blank"><img style="max-width:80%; margin-top:20px" src="img/unswengsoc.jpg"></a></div>
         <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="http://www.bitsa.org.au/"
                 target="_blank"><img style="max-width:60%" src="img/bitsa.png"></a></div>
-        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/unsw.wit/" target="_blank"><img
-                    style="max-width:80%" src="img/wit.jpg"></a></div>
+        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/BusinessOneUNSW/"
+                target="_blank"><img style="max-width:80%;max-height:80px;margin-top:20px"
+                    src="img/businessoneblack.png"></a></div>
         <div class="col-md-1"></div>
     </div>
 
-    <!-- Contact form section -->
+    <!-- Customer Stories -->
+    <!-- <div class="row" style="background:#34495E">
+        <h2 style="margin:20px auto;color:white">Customer Stories</h2>
+    </div> -->
+    <!-- Customer Story 1 -->
+    <div class="row" style="background:#34495E">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center;margin-top:30px">
+            <img style="filter: brightness(0) invert(1);max-width: 50%;" src="img/unswengsoctransparent.png">
+        </div>
+        <div class="col-md-4 col-sm-auto" style="color:white;margin-top:30px">
+            <p>
+                "Agreed and waiting on this"
+            </p>
+            <br>
+            <p style="text-align:right">
+                <a href="https://www.linkedin.com/in/anniehu97/" target="_blank">
+                    <img style="border-radius:50%;max-width:7%;margin-right:10px" src="img/anniehu.jpg"></a>Annie Hu,
+                UNSW Engineering Society HR Vice President
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <!-- Customer Story 2 -->
+    <div class="row" style="background:#34495E">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center">
+            <img style="filter: brightness(0) invert(1);max-width: 60%;" src="img/businessonewhite.png">
+        </div>
+        <div class="col-md-4 col-sm-auto" style="color:white">
+            <p>
+                "Project Malin moved us from using complicated excel sheets and formulas to an all in one web platform
+                that all of us can use without hassle"
+            </p>
+            <br>
+            <p style="text-align:right">
+                <a href="https://www.linkedin.com/in/venkateshvasudevan/" target="_blank">
+                    <img style="border-radius:50%;max-width:7%;margin-right:10px" src="img/venkautism.jpg"></a>Venkatesh
+                Vasudevan, UNSW BusinessOne Co-President
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <!-- Customer Story 3 -->
+    <div class="row" style="background:#34495E">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center">
+            <img style="filter: brightness(0) invert(1);max-width: 60%;" src="img/bsoc.png">
+        </div>
+        <div class="col-md-4 col-sm-auto" style="color:white">
+            <p>
+                "Waiting on this"
+            </p>
+            <br>
+            <p style="text-align:right">
+                <a href="https://www.linkedin.com/in/amy-sun-a5128915b/" target="_blank">
+                    <img style="border-radius:50%;max-width:7%;margin-right:10px" src="img/amysun.jpg"></a>Amy Sun, UNSW
+                Business Society Vice-President (Internal)
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <!-- Customer Story 4 -->
+    <div class="row" style="background:#34495E">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="margin-bottom:30px;text-align:center">
+            <img style="filter: brightness(0) invert(1);max-width: 30%;" src="img/mathsoc.png">
+        </div>
+        <div class="col-md-4 col-sm-auto" style="color:white">
+            <p>
+                "What Project Malin did for us was nothing short of revolutionising our recruitment processes at a
+                fundamental level. With just a click, gone were the days of editing interview times and locations
+                between copy pasting a myriad of emails. I'd recommend Project Malin to any society holding a
+                recruitment drive without a second to waste."
+            </p>
+            <br>
+            <p style="text-align:right">
+                <a href="https://www.linkedin.com/in/andrewantony/" target="_blank">
+                    <img style="border-radius:50%;max-width:7%;margin-right:10px"
+                        src="img/andrewantonymathsoc.jpg"></a>Andrew Antony, MathSoc Vice President
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <!-- Customer Story 5 -->
+    <div class="row" style="background:#34495E">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="margin-bottom:30px;text-align:center">
+            <img style="filter: brightness(0) invert(1);max-width: 30%;" src="img/ucctransparent.png">
+        </div>
+        <div class="col-md-4 col-sm-auto" style="margin-bottom:30px;color:white">
+            <p>
+                "Haven't asked yet"
+            </p>
+            <br>
+            <p style="text-align:right">
+                <a href="https://www.linkedin.com/in/jackzhou167/" target="_blank">
+                    <img style="border-radius:50%;max-width:7%;margin-right:10px" src="img/jackzhou.jpg"></a>Jack Zhou,
+                Vice President (Education)
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+
+    <!-- Capabilities within the software -->
+    <div class="row">
+        <h2 style="margin:20px auto">Replace the entire G Suite with one software</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">BUILD YOUR CUSTOM FORM</h3>
+            <br>
+            <img style="max-width:100%" src="img/buildform.gif">
+        </div>
+        <div class="col-md-4 col-sm-auto">
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                        <img style="max-width:15%" src="img/noforms.png">
+                    </div>
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto">
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                        <img style="max-width:15%" src="img/nosheets.png">
+                    </div>
+            </p>
+        </div>
+        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">MARK APPLICATIONS</h3>
+            <br>
+            <img style="max-width:100%" src="img/mark.gif">
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">ALLOCATE INTERIVEWEES</h3>
+            <br>
+            <img style="max-width:100%" src="img/interview.gif">
+        </div>
+        <div class="col-md-4 col-sm-auto">
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                    <img style="max-width:15%" src="img/nosheets.png">
+                </div>
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto">
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                    <img style="max-width:15%" src="img/noemail.png">
+                </div>
+            </p>
+        </div>
+        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">AUTO SEND EMAILS</h3>
+            <br>
+            <img style="max-width:100%" src="img/email.gif">
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+
+    <!-- Pricing -->
     <div class="row" style="background:#2F4F4E">
+        <div class="col-md-3 col-sm-auto"></div>
+        <div class="col-md-6 col-sm-auto" style="color:white;text-align:center">
+            <h2 style="margin-top:30px">Pricing</h2>
+            <br><br>
+            <p style="text-align:left">
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            </p>
+            <br><br>
+            <a href="https://projectmalinapp.me/" target="_blank">
+                <button class="btn btn-rounded" style="background: #EF5350">Purchase via Credit Card</button></a>
+            <a href="https://projectmalinapp.me/" target="_blank">
+                <button class="btn btn-rounded" style="background: #EF5350">Purchase via EFT</button></a>
+            <div style="margin-bottom:100px"></div>
+        </div>
+        <div class="col-md-3 col-sm-auto"></div>
+    </div>
+
+
+
+
+
+    <!-- Contact form section -->
+    <!-- <div class="row" style="background:#2F4F4E">
         <div class="col-md-4 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="text-align:center">
             <br>
@@ -232,36 +453,39 @@
             <form action="https://formspree.io/michaelliang15@gmail.com" method="POST">
 
 
-            <div class="mc-field-group" style="padding-left:10vh">
-                <div class="md-form">
-                    <input type="text" value="" name="cu-name" class="required form-control" style="width:30vh;color:white">
-                    <label for="cu-name" style="color:white">Name</label>
+                <div class="mc-field-group" style="padding-left:10vh">
+                    <div class="md-form">
+                        <input type="text" value="" name="cu-name" class="required form-control"
+                            style="width:30vh;color:white">
+                        <label for="cu-name" style="color:white">Name</label>
+                    </div>
                 </div>
-            </div>
-            <div class="mc-field-group" style="padding-left:10vh">
-                <div class="md-form">
-                    <input type="text" value="" name="cu-email" class="required form-control" style="width:30vh;color:white">
-                    <label for="cu-email" style="color:white">Email</label>
+                <div class="mc-field-group" style="padding-left:10vh">
+                    <div class="md-form">
+                        <input type="text" value="" name="cu-email" class="required form-control"
+                            style="width:30vh;color:white">
+                        <label for="cu-email" style="color:white">Email</label>
+                    </div>
                 </div>
-            </div>
-            <div class="mc-field-group" style="padding-left:10vh">
-            <div class="md-form" >
-                <textarea type="text" name="cu-message" class="md-textarea form-control" rows="3" style="width:30vh;color:white"></textarea>
-                <label for="cu-message" style="color:white">Message</label>
-              </div>
-            </div>
-            <br>
-            <button class="btn btn-rounded" style="background: #26a69a">Submit</button>
+                <div class="mc-field-group" style="padding-left:10vh">
+                    <div class="md-form">
+                        <textarea type="text" name="cu-message" class="md-textarea form-control" rows="3"
+                            style="width:30vh;color:white"></textarea>
+                        <label for="cu-message" style="color:white">Message</label>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-rounded" style="background: #26a69a">Submit</button>
             </form>
             <br>
         </div>
         <div class="col-md-4 col-sm-auto"></div>
-
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <div class="row applicationFormFooter">
-        <a style="margin: 0 auto;" href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
+        <a style="margin: 0 auto;"
+            href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
             target="_blank">
             <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png"></a>
     </div>
