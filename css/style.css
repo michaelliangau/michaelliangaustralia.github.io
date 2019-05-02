@@ -32,3 +32,7 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
         text-align:center;
     }
   }
+
+.titleHeader {
+    margin:30px auto;
+}

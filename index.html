@@ -45,166 +45,67 @@
 <body>
     <!-- Header -->
     <div class="row applicationFormHeader">
-        <a style="margin: 0 auto;"
-            href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
-            target="_blank">
+        <a style="margin: 0 auto;" href="https://youtu.be/rWKda4d9pKw?t=34" target="_blank">
             <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png">
         </a>
     </div>
 
     <div class="row" style="background:#2F4F4E">
-        <!-- First Half -->
+
+        <!-- LEFT SIDE -->
         <div class="col-md-1 col-sm-auto"></div>
         <div class="col-md-4 col-sm-10">
             <!-- Start your project here-->
-            <div style="height: 100vh">
+            <div style="height: 90vh">
                 <div class="flex-center flex-column">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/9oJywBytems" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <br>
-                    <p class="phoneMargin" style="color:white">Project Malin is software built for all of your
-                        society's leadership recruitment. We've built an application to automate email sending and
-                        interview scheduling to ultimately replace the G Suite mess that
-                        all societies deal with.
+                    <p class="phoneMargin" style="color:white">Project Malin is software built to automate all of your
+                        society's leadership recruitment.
                         <br><br>
-                        Test out a new recruiting experience with these test credentials:
-                        <br>
-                        Email: Tommy@gmail.com
-                        <br>
-                        Password: Tommy
-
+                        Project Malin was began in early 2018 and is built by ex and current society executives who have run some of the biggest societies in Australia. We've experienced the pain of annual society recruitment and are building Project Malin as a better way.
+                        <br><br>
+                        A bit about the story behind Project Malin <a href="https://medium.com/@michaelliang15/project-malin-available-for-everyone-d45bdc3e96f7" target="_blank" style="color:#26a69a">here</a>.
                     </p>
                     <br>
-                    <a href="https://projectmalinapp.me/" target="_blank">
-                        <button class="btn btn-rounded" style="background: #26a69a">Test Project Malin</button></a>
-                    <br>
-                    <p class="phoneMargin" style="color:white">
-                        We love your feedback and this will forever be a work in progress to continuously make your
-                        recruitment experience better. Get in touch at <a style="color:#26a69a"
-                            href="mailto:michaelliang15@gmail.com" target="_blank">Michael Liang</a>.
-
-                    </p>
+                    <button id="#price" class="btn btn-rounded"
+                    style="background: #26a69a;margin-bottom: 30px;">PRICING AND PAYMENT</button>
                 </div>
             </div>
 
         </div>
         <div class="col-md-1 col-sm-auto"></div>
 
-        <!-- Second Half -->
+
+        <!-- RIGHT SIDE -->
         <div class="col-md-1 col-sm-auto"></div>
         <div class="col-md-4 col-sm-10">
             <!-- <div style="height: 100vh"> -->
             <div class="flex-center flex-column">
                 <img class="fishDown" src="img/ProjectMalinLogo.png" style="max-width:100%">
                 <h5 class="animated fadeIn mb-3" style="color:white">Society recruitment software</h5>
-
                 <br>
-                <p style="color:white" class="phoneMargin">Our pricing is flat at $59/year and you will receive
-                    unlimited access to our application no matter if you have 5 or 500 users. You will also
-                    automatically receive new application updates.
+                
+                <p class="phoneMargin" style="color:white">
+                    Test out a new recruiting experience with these test credentials:
+                    <br>
+                    Email: Tommy@gmail.com
+                    <br>
+                    Password: Tommy
                 </p>
                 <br>
 
-                <!-- Load Stripe.js on your website. -->
-                <script src="https://js.stripe.com/v3"></script>
+                <a href="https://projectmalinapp.me/" target="_blank">
+                    <button class="btn btn-rounded" style="background: #EF5350">Try Project Malin</button></a>
 
-                <!-- Create a button that your customers click to complete their purchase. -->
-                <button id="checkout-button" class="btn btn-rounded"
-                    style="background: #EF5350;margin-bottom: 30px;">Purchase
-                    Subscription</button>
-                <div id="error-message"></div>
-
-                <script>
-                    var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
-                        betas: ['checkout_beta_4']
-                    });
-
-                    var checkoutButton = document.getElementById('checkout-button');
-                    checkoutButton.addEventListener('click', function () {
-                        // When the customer clicks on the button, redirect
-                        // them to Checkout.
-                        stripe.redirectToCheckout({
-                                items: [{
-                                    plan: 'plan_EKvaCnNTY5rnPc',
-                                    quantity: 1
-                                }],
-
-                                // Note that it is not guaranteed your customers will be redirected to this
-                                // URL *100%* of the time, it's possible that they could e.g. close the
-                                // tab between form submission and the redirect.
-                                successUrl: 'http://projectmalin.me/success',
-                                cancelUrl: 'http://projectmalin.me/canceled',
-                            })
-                            .then(function (result) {
-                                if (result.error) {
-                                    // If `redirectToCheckout` fails due to a browser or network
-                                    // error, display the localized error message to your customer.
-                                    var displayError = document.getElementById('error-message');
-                                    displayError.textContent = result.error.message;
-                                }
-                            });
-                    });
-                </script>
-
-
-
-                <!-- Mailing -->
-                <br>
-                <p style="color:white" class="phoneMargin">Join our mailing list for more in-group updates and offers!
-                </p>
-
-                <!-- Begin Mailchimp Signup Form -->
-                <form
-                    action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate phoneMargin" novalidate>
-                    <!-- Material input -->
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME"
-                                style="width:30vh;color:white">
-                            <label for="mce-FNAME" style="color:white">First Name</label>
-                        </div>
-                    </div>
-                    <!-- Material input -->
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="text" value="" name="SOCIETY" class="required form-control" id="mce-SOCIETY"
-                                style="width:30vh;color:white">
-                            <label for="mce-SOCIETY" style="color:white">Society</label>
-                        </div>
-                    </div>
-                    <!-- Material input -->
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"
-                                style="color:white">
-                            <label for="mce-EMAIL" style="color:white">Email Address</label>
-                        </div>
-                    </div>
-
-                    <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                            name="b_00845a95e6ebcd24517ea7383_1a662a599e" tabindex="-1" value=""></div>
-
-                    <div style="text-align:center">
-                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                            class="btn btn-rounded" style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
-                    </div>
-                </form>
             </div>
         </div>
-        <div class="col-md-1 col-sm-auto"></div>
     </div>
-
     <!-- Trusted by section -->
     <div class="row">
-        <h2 style="margin:20px auto">Our early adopters</h2>
+        <h2 class="titleHeader">Backed by</h2>
     </div>
 
     <div class="row" style="background:white">
@@ -224,11 +125,11 @@
     </div>
 
     <!-- Customer Stories -->
-    <!-- <div class="row" style="background:#34495E">
-        <h2 style="margin:20px auto;color:white">Customer Stories</h2>
-    </div> -->
-    <!-- Customer Story 1 -->
     <div class="row" style="background:#34495E">
+        <h2 class="titleHeader" style="color:white">User stories</h2>
+    </div>
+    <!-- Customer Story 1 -->
+    <div class="row" style="padding:10px 0px; background:#34495E">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="text-align:center;margin-top:30px">
             <img style="filter: brightness(0) invert(1);max-width: 50%;" src="img/unswengsoctransparent.png">
@@ -247,14 +148,15 @@
         <div class="col-md-2 col-sm-auto"></div>
     </div>
     <!-- Customer Story 2 -->
-    <div class="row" style="background:#34495E">
+    <div class="row" style="padding:10px 0px; background:#34495E">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="text-align:center">
             <img style="filter: brightness(0) invert(1);max-width: 60%;" src="img/businessonewhite.png">
         </div>
         <div class="col-md-4 col-sm-auto" style="color:white">
             <p>
-                "Project Malin moved us from using complicated excel sheets and formulas to an all in one web platform
+                "Project Malin moved us from using complicated excel sheets and formulas to an all in one
+                web platform
                 that all of us can use without hassle"
             </p>
             <br>
@@ -267,7 +169,7 @@
         <div class="col-md-2 col-sm-auto"></div>
     </div>
     <!-- Customer Story 3 -->
-    <div class="row" style="background:#34495E">
+    <div class="row" style="padding:10px 0px; background:#34495E">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="text-align:center">
             <img style="filter: brightness(0) invert(1);max-width: 60%;" src="img/bsoc.png">
@@ -286,16 +188,19 @@
         <div class="col-md-2 col-sm-auto"></div>
     </div>
     <!-- Customer Story 4 -->
-    <div class="row" style="background:#34495E">
+    <div class="row" style="padding:10px 0px; background:#34495E">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="margin-bottom:30px;text-align:center">
             <img style="filter: brightness(0) invert(1);max-width: 30%;" src="img/mathsoc.png">
         </div>
         <div class="col-md-4 col-sm-auto" style="color:white">
             <p>
-                "What Project Malin did for us was nothing short of revolutionising our recruitment processes at a
-                fundamental level. With just a click, gone were the days of editing interview times and locations
-                between copy pasting a myriad of emails. I'd recommend Project Malin to any society holding a
+                "What Project Malin did for us was nothing short of revolutionising our recruitment
+                processes at a
+                fundamental level. With just a click, gone were the days of editing interview times and
+                locations
+                between copy pasting a myriad of emails. I'd recommend Project Malin to any society holding
+                a
                 recruitment drive without a second to waste."
             </p>
             <br>
@@ -308,7 +213,7 @@
         <div class="col-md-2 col-sm-auto"></div>
     </div>
     <!-- Customer Story 5 -->
-    <div class="row" style="background:#34495E">
+    <div class="row" style="padding:10px 0px; background:#34495E">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="margin-bottom:30px;text-align:center">
             <img style="filter: brightness(0) invert(1);max-width: 30%;" src="img/ucctransparent.png">
@@ -327,62 +232,36 @@
         <div class="col-md-2 col-sm-auto"></div>
     </div>
 
-    <!-- Capabilities within the software -->
+    <!-- PRODUCT CAPABILITIES -->
     <div class="row">
-        <h2 style="margin:20px auto">Replace the entire G Suite with one software</h2>
+        <h2 class="titleHeader">Automate your society's leadership recruitment with one software</h2>
     </div>
-    <div class="row">
+    <div class="row" style="margin: 50px 0px;">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto">
-            <h3 style="text-align:center">BUILD YOUR CUSTOM FORM</h3>
-            <br>
+            <h3 style="text-align:center">APPLY</h3>
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                    <img style="max-width:15%" src="img/noforms.png">
+                </div>
+            </p>
+        </div>
+        <div class="col-md-4 col-sm-auto">
             <img style="max-width:100%" src="img/buildform.gif">
-        </div>
-        <div class="col-md-4 col-sm-auto">
-            <p>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                <br>
-                <div style="text-align:center">
-                        <img style="max-width:15%" src="img/noforms.png">
-                    </div>
-            </p>
+
         </div>
         <div class="col-md-2 col-sm-auto"></div>
     </div>
-    <div class="row">
+    <div class="row" style="margin: 50px 0px;">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto">
-            <p>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                <br>
-                <div style="text-align:center">
-                        <img style="max-width:15%" src="img/nosheets.png">
-                    </div>
-            </p>
-        </div>
-        <div class="col-md-4 col-sm-auto">
-            <h3 style="text-align:center">MARK APPLICATIONS</h3>
-            <br>
-            <img style="max-width:100%" src="img/mark.gif">
-        </div>
-        <div class="col-md-2 col-sm-auto"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-2 col-sm-auto"></div>
-        <div class="col-md-4 col-sm-auto">
-            <h3 style="text-align:center">ALLOCATE INTERIVEWEES</h3>
-            <br>
-            <img style="max-width:100%" src="img/interview.gif">
-        </div>
-        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">MARK</h3>
             <p>
                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
@@ -395,11 +274,36 @@
                 </div>
             </p>
         </div>
+        <div class="col-md-4 col-sm-auto">
+            <img style="max-width:100%" src="img/mark.gif">
+        </div>
         <div class="col-md-2 col-sm-auto"></div>
     </div>
-    <div class="row">
+    <div class="row" style="margin: 50px 0px;">
         <div class="col-md-2 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">SCHEDULE</h3>
+            <p>
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                <br>
+                <div style="text-align:center">
+                    <img style="max-width:15%" src="img/nosheets.png">
+                </div>
+            </p>
+        </div>
+        <div class="col-md-4 col-sm-auto">
+            <img style="max-width:100%" src="img/interview.gif">
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+    <div class="row" style="margin: 50px 0px;">
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto">
+            <h3 style="text-align:center">EMAIL</h3>
             <p>
                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
@@ -413,8 +317,6 @@
             </p>
         </div>
         <div class="col-md-4 col-sm-auto">
-            <h3 style="text-align:center">AUTO SEND EMAILS</h3>
-            <br>
             <img style="max-width:100%" src="img/email.gif">
         </div>
         <div class="col-md-2 col-sm-auto"></div>
@@ -424,28 +326,107 @@
     <div class="row" style="background:#2F4F4E">
         <div class="col-md-3 col-sm-auto"></div>
         <div class="col-md-6 col-sm-auto" style="color:white;text-align:center">
-            <h2 style="margin-top:30px">Pricing</h2>
-            <br><br>
-            <p style="text-align:left">
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            <h2 class="titleHeader">Price</h2>
+            <h2><b>$59/year</b></h2>
+            <p>
+                Unlimited users. Unlimited features.
             </p>
-            <br><br>
-            <a href="https://projectmalinapp.me/" target="_blank">
-                <button class="btn btn-rounded" style="background: #EF5350">Purchase via Credit Card</button></a>
-            <a href="https://projectmalinapp.me/" target="_blank">
-                <button class="btn btn-rounded" style="background: #EF5350">Purchase via EFT</button></a>
-            <div style="margin-bottom:100px"></div>
+            <button class="btn btn-rounded" style="background: #EF5350" onclick="toggleHide(this,'eftInformation')">Pay
+                via
+                Bank Transfer (EFT)</button>
+            <p style="font-size:12px">
+                <a id="checkout-button">Pay via credit card</a>
+                <div id="error-message"></div>
+            </p>
         </div>
         <div class="col-md-3 col-sm-auto"></div>
     </div>
 
+    <!-- EFT Information -->
+    <div id="eftInformation" class="row" style="display:none">
+        <div class="col-md-3 col-sm-auto"></div>
+        <div class="col-md-6 col-sm-auto" style="text-align:center">
+            <h2 class="titleHeader">How to pay by EFT</h2>
+            <p>
+                Please email <a href="mailto:michaelliang15@gmail.com" target="_blank">michaelliang15@gmail.com</a> for
+                the Project Malin BSB details.
+                <br>
+                Alternatively, we can also get into contact through <a
+                    href="https://www.linkedin.com/in/michaelliang15/" target="_blank">LinkedIn</a> or <a
+                    href="https://www.facebook.com/michaelliangaustralia" target="_blank">Facebook</a>.
+            </p>
+        </div>
+        <div class="col-md-3 col-sm-auto"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row applicationFormFooter">
+        <a style="margin: 0 auto;"
+            href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
+            target="_blank">
+            <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png"></a>
+    </div>
+
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
+</body>
+
+</html>
+
+<script>
+    // Unhide EFT information
+    function toggleHide(clickedButton, divID) {
+        var item = document.getElementById(divID);
+        item.style.display = "flex";
+    }
+
+    // Stripe 
+    var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
+        betas: ['checkout_beta_4']
+    });
+
+    var checkoutButton = document.getElementById('checkout-button');
+    checkoutButton.addEventListener('click', function () {
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout({
+                items: [{
+                    plan: 'plan_EKvaCnNTY5rnPc',
+                    quantity: 1
+                }],
+
+                // Note that it is not guaranteed your customers will be redirected to this
+                // URL *100%* of the time, it's possible that they could e.g. close the
+                // tab between form submission and the redirect.
+                successUrl: 'http://projectmalin.me/success',
+                cancelUrl: 'http://projectmalin.me/canceled',
+            })
+            .then(function (result) {
+                if (result.error) {
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    var displayError = document.getElementById('error-message');
+                    displayError.textContent = result.error.message;
+                }
+            });
+    });
+</script>
 
 
 
-
-    <!-- Contact form section -->
-    <!-- <div class="row" style="background:#2F4F4E">
+<!-- DEPRECIATED Contact form section -->
+<!-- <div class="row" style="background:#2F4F4E">
         <div class="col-md-4 col-sm-auto"></div>
         <div class="col-md-4 col-sm-auto" style="text-align:center">
             <br>
@@ -482,25 +463,54 @@
         <div class="col-md-4 col-sm-auto"></div>
     </div> -->
 
-    <!-- Footer -->
-    <div class="row applicationFormFooter">
-        <a style="margin: 0 auto;"
-            href="https://medium.com/@michaelliang15/project-malin-recruitment-looking-for-society-testers-d018c90bb98f"
-            target="_blank">
-            <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png"></a>
+<!-- Mailing section
+    
+    
+                <!-- Begin Mailchimp Signup Form
+                <form
+                    action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                    class="validate phoneMargin" novalidate>
+                    <!-- Material input
+                    <div class="mc-field-group">
+                        <div class="md-form">
+                            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME"
+                                style="width:30vh;color:white">
+                            <label for="mce-FNAME" style="color:white">First Name</label>
+                        </div>
+                    </div>
+                    <!-- Material input
+                    <div class="mc-field-group">
+                        <div class="md-form">
+                            <input type="text" value="" name="SOCIETY" class="required form-control" id="mce-SOCIETY"
+                                style="width:30vh;color:white">
+                            <label for="mce-SOCIETY" style="color:white">Society</label>
+                        </div>
+                    </div>
+                    <!-- Material input
+                    <div class="mc-field-group">
+                        <div class="md-form">
+                            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"
+                                style="color:white">
+                            <label for="mce-EMAIL" style="color:white">Email Address</label>
+                        </div>
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_00845a95e6ebcd24517ea7383_1a662a599e" tabindex="-1" value=""></div>
+
+                    <div style="text-align:center">
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                            class="btn btn-rounded" style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-auto"></div>
     </div>
-
-    <!-- /Start your project here-->
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-</body>
-
-</html>
+    -->
