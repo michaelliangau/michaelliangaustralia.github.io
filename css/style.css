@@ -34,6 +34,9 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     #productCapabilities {
         margin-top:30px !important;
     }
+    .gifPhone {
+        max-width:100%;
+    }
   }
 
 .titleHeader {
