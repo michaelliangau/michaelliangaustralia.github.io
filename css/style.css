@@ -18,12 +18,23 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     margin-bottom: 0;
     height: 10vh;
 }
+
+.marginTopTeamNames {
+    margin-top:30px;
+}
+
 @media (max-width: 325px) {
     .phoneMargin {
         margin:0 30px !important;
     }
     .fishDown {
         margin-top: 15%;
+    }
+    .teamNames {
+        padding-bottom:15px;
+    }
+    .marginTopTeamNames {
+        margin-top:0px;
     }
   }
 @media (max-width: 480px) {
@@ -36,6 +47,12 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     }
     .gifPhone {
         max-width:100%;
+    }
+    .teamNames {
+        padding-bottom:15px;
+    }
+    .marginTopTeamNames {
+        margin-top:0px;
     }
   }
 

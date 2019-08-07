@@ -16,7 +16,7 @@
     </script>
 
     <!-- SEO Meta Descriptions -->
-    <title>Project Malin: Student Organisation Recruitment</title>
+    <title>Project Malin: Recruitment</title>
     <meta name="description" content="Recruitment software built by student executives to streamline and automate all student organisation leadership recruitment.">
     <meta name="keywords" content="Project Malin, Society Recruiting Software, Society Recruiting, University Recruiting Software">
     <meta charset="utf-8">
@@ -402,13 +402,73 @@
         <div class="col-md-3 col-sm-auto"></div>
     </div> -->
 
+    <!-- TEAM -->
+<div class="row" style="background:#34495E">
+        <h2 class="titleHeader" style="color:white">Team</h2>
+    </div>
+    <!-- Customer Story 1 -->
+    <div class="row" style="padding:10px 0px; background:#34495E">
+
+        <div class="col-md-2 col-sm-auto"></div>
+        <div class="col-md-4 col-sm-auto" style="text-align:center;margin-top:30px">
+            <a href="https://unswengsoc.com/" target="_blank"><img style="filter: brightness(0) invert(1);max-width: 100%;"
+                    src="img/company.png"></a>
+        </div>
+
+        <div class="col-md-4 col-sm-auto" style="color:white;margin-top:30px">
+            <p class="phoneMargin" style="margin-bottom:0px">
+                Our team is filled with product managers, developers and designers who have worked for some of the world's largest companies.
+                <br><br>
+                Some of which started off as clients and then joined the team!
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-sm-auto" style="color:white;margin-top:30px">
+                    <p class="phoneMargin teamNames" style="text-align:left">
+                        <a href="https://www.linkedin.com/in/michaelliang15/" target="_blank">
+                            <img style="border-radius:50%;max-width:15%;margin-right:10px" src="img/michaelliang.jpg"></a>Michael Liang
+                    </p>
+                    <p class="phoneMargin teamNames" style="text-align:left">
+                        <a href="https://www.linkedin.com/in/venkateshvasudevan/" target="_blank">
+                            <img style="border-radius:50%;max-width:15%;margin-right:10px" src="img/venkautism.jpg"></a>Venkatesh Vasudevan
+                    </p>
+                    <p class="phoneMargin teamNames" style="text-align:left">
+                        <a href="https://www.linkedin.com/in/andrewantony/" target="_blank">
+                            <img style="border-radius:50%;max-width:15%;margin-right:10px" src="img/andrewantonymathsoc.jpg"></a>Andrew Antony
+                    </p>
+                    </div>
+                    <div class="col-md-6 col-sm-auto marginTopTeamNames" style="color:white">
+                        <p class="phoneMargin teamNames" style="text-align:left">
+                            <a href="https://www.linkedin.com/in/malin-wijesuriya/" target="_blank">
+                                <img style="border-radius:50%;max-width:15%;margin-right:10px" src="img/malin.jpg"></a>Malin Wijesuriya
+                        </p>
+                        <p class="phoneMargin teamNames" style="text-align:left">
+                            <a href="https://www.linkedin.com/in/sharron-chen-8541ab11a/" target="_blank">
+                                <img style="border-radius:50%;max-width:15%;margin-right:10px" src="img/sharron.jpg"></a>Sharron Chen
+                        </p>
+                    </div>
+                </div>        
+        </div>
+        <div class="col-md-2 col-sm-auto"></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="row" style="background:#2F4F4E">
+        <div class="col-md-3 col-sm-auto"></div>
+        <div class="col-md-6 col-sm-auto" style="color:white;text-align:center">
+            <h2 id="price" class="titleHeader">Join the movement</h2>
+            <p>
+                Send an email to <a href="mailto:michaelliang15@gmail.com" target="_blank" style="color:#26a69a">michaelliang15@gmail.com</a> to learn more.
+        </p>
+        </div>
+        <div class="col-md-3 col-sm-auto"></div>
+    </div>
+
     <!-- Footer -->
     <div class="row applicationFormFooter">
         <a style="margin: 0 auto;" href="https://youtu.be/rWKda4d9pKw?t=34" target="_blank">
             <img style="height: 6vh; margin-top: 1vh;" src="img/ProjectMalinLogoWhiteFish.png" alt="Project Malin Logo"></a>
     </div>
 
-    <!-- /Start your project here-->
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -420,48 +480,48 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Load Stripe.js on your website. -->
-    <script src="https://js.stripe.com/v3"></script>
+    <!-- <script src="https://js.stripe.com/v3"></script> -->
 </body>
 
 </html>
 
 <script>
     // Unhide EFT information
-    function toggleHide(clickedButton, divID) {
-        var item = document.getElementById(divID);
-        item.style.display = "flex";
-    }
+    // function toggleHide(clickedButton, divID) {
+    //     var item = document.getElementById(divID);
+    //     item.style.display = "flex";
+    // }
 
     // Stripe 
-    var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
-        betas: ['checkout_beta_4']
-    });
+    // var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
+    //     betas: ['checkout_beta_4']
+    // });
 
-    var checkoutButton = document.getElementById('checkout-button');
-    checkoutButton.addEventListener('click', function () {
-        // When the customer clicks on the button, redirect
-        // them to Checkout.
-        stripe.redirectToCheckout({
-                items: [{
-                    plan: 'plan_EKvaCnNTY5rnPc',
-                    quantity: 1
-                }],
+    // var checkoutButton = document.getElementById('checkout-button');
+    // checkoutButton.addEventListener('click', function () {
+    //     // When the customer clicks on the button, redirect
+    //     // them to Checkout.
+    //     stripe.redirectToCheckout({
+    //             items: [{
+    //                 plan: 'plan_EKvaCnNTY5rnPc',
+    //                 quantity: 1
+    //             }],
 
-                // Note that it is not guaranteed your customers will be redirected to this
-                // URL *100%* of the time, it's possible that they could e.g. close the
-                // tab between form submission and the redirect.
-                successUrl: 'http://projectmalin.me/success',
-                cancelUrl: 'http://projectmalin.me/canceled',
-            })
-            .then(function (result) {
-                if (result.error) {
-                    // If `redirectToCheckout` fails due to a browser or network
-                    // error, display the localized error message to your customer.
-                    var displayError = document.getElementById('error-message');
-                    displayError.textContent = result.error.message;
-                }
-            });
-    });
+    //             // Note that it is not guaranteed your customers will be redirected to this
+    //             // URL *100%* of the time, it's possible that they could e.g. close the
+    //             // tab between form submission and the redirect.
+    //             successUrl: 'http://projectmalin.me/success',
+    //             cancelUrl: 'http://projectmalin.me/canceled',
+    //         })
+    //         .then(function (result) {
+    //             if (result.error) {
+    //                 // If `redirectToCheckout` fails due to a browser or network
+    //                 // error, display the localized error message to your customer.
+    //                 var displayError = document.getElementById('error-message');
+    //                 displayError.textContent = result.error.message;
+    //             }
+    //         });
+    // });
 </script>
 
 
