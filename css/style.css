@@ -59,3 +59,17 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 .titleHeader {
     margin:30px auto;
 }
+
+.centerfish {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+#tryTribespotButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%; 
+}
