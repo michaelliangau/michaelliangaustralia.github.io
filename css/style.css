@@ -2,7 +2,9 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     border-bottom: 1px solid #EF5350 !important;
     box-shadow: 0 1px 0 0 #EF5350 !important;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
 .md-form label.active {
     color:#EF5350 !important;
 }
@@ -59,3 +61,32 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
 .titleHeader {
     margin:30px auto;
 }
+#topnav {
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color:#243B55;
+  }
+  #topnav li {
+    display: inline-block;  
+    text-align: left;
+    padding: 0;
+    margin-right: 5%;
+  }
+  #topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 17px;
+  }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+#center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
