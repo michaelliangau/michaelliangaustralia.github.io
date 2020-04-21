@@ -71,5 +71,4 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%; 
 }
