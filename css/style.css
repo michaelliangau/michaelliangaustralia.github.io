@@ -3,6 +3,10 @@ input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([re
     box-shadow: 0 1px 0 0 #EF5350 !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .md-form label.active {
     color:#EF5350 !important;
 }
