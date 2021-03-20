@@ -57,6 +57,7 @@
         <li><a href="#productCapabilities">Product Capabilities</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div style="background:#243B55">
@@ -64,10 +65,12 @@
         <br><br>
         <a href="https://app.tribespot.co/" target="_blank">
             <button id="tryTribespotButton" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px">TRY TRIBESPOT</button></a>
+        <a href="https://app.tribespot.co/guide" target="_blank">
+            <button id="tryTribespotButton" class="btn btn-rounded" style="background: #EF5350;margin-bottom: 30px">USER GUIDE</button></a>
         <p class="phoneMargin" style="color:white;text-align:center">Tribespot is software built to automate all of your
             organisation's recruitment.
             <br><br>
-            Tribespot began in early 2018 and is built by ex and current student society executives
+            Tribespot began in early 2019 and was built by ex and current student society executives
             who have
             run some of the biggest student organisations in Australia.
             <br><br>
@@ -86,25 +89,6 @@
     </div>
 
     <div class="row" style="background:white">
-        <!-- <div class="col-md-1"></div>
-        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a href="http://unswbsoc.com/"
-                target="_blank"><img style="max-width:80%; margin-top:20px" src="img/unsw.png"
-                    alt="UNSW Business Society Logo"></a></div>
-        <div style="text-align:center;margin-bottom:20px" class="col-md-2 col-sm-12"><a
-                href="https://www.unswconsultingclub.com" target="_blank"><img alt="UNSW Consulting Club Logo"
-                    style="max-width:80%" src="img/usyd.png"></a></div>
-        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://unswengsoc.com/"
-                target="_blank"><img alt="UNSW Engineering Society Logo" style="max-width:80%; margin-top:20px"
-                    src="img/macquarie.png"></a></div>
-        <div style="text-align:center;margin-bottom:40px" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/vsamacq/"
-                target="_blank"><img alt="Macquarie VSA Logo" style="max-width:80%" src="img/uts.png"></a></div>
-        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/BusinessOneUNSW/"
-                target="_blank"><img alt="UNSW BusinessOne Logo" style="max-width:80%;max-height:80px;margin-top:20px"
-                    src="img/melbourne.png"></a></div>
-        <div style="text-align:center" class="col-md-2 col-sm-12"><a href="https://www.facebook.com/BusinessOneUNSW/"
-            target="_blank"><img alt="UNSW BusinessOne Logo" style="max-width:80%;max-height:80px;margin-top:20px"
-                src="img/monash.png"></a></div>
-        <div class="col-md-1"></div> -->
         <div class="container text-center" style="margin-bottom: 40px;">
             <div class="row g-5">
               <div class="col-md-2">
@@ -430,13 +414,15 @@
     </div>
 
     <!-- CTA -->
-    <div class="row" style="background:#243B55">
+    <div id="contact" class="row" style="background:#243B55">
         <div class="col-md-3 col-sm-auto"></div>
         <div class="col-md-6 col-sm-auto" style="color:white;text-align:center">
             <h2 id="price" class="titleHeader">Join the movement</h2>
             <p>
                 Send an email to <a href="mailto:general@tribespot.co" target="_blank"
-                    style="color:#26a69a">general@tribespot.co</a> to learn more.
+                    style="color:#26a69a">general@tribespot.co</a> to learn more. You may also reach us on <a href="https://www.facebook.com/andrew.antony.359/" target="_blank"
+                    style="color:#26a69a">Facebook</a> or <a href="https://www.linkedin.com/in/andrewantony/" target="_blank"
+                    style="color:#26a69a">LinkedIn</a>.
             </p>
             <p>
                 See also: <a href="https://culturestride.com/" target="_blank"
@@ -468,134 +454,7 @@
 </body>
 
 </html>
+ 
 
-<script>
-    // Unhide EFT information
-    // function toggleHide(clickedButton, divID) {
-    //     var item = document.getElementById(divID);
-    //     item.style.display = "flex";
-    // }
-
-    // Stripe 
-    // var stripe = Stripe('pk_live_x24Wmy59wQXf3uzi66zxSFLV', {
-    //     betas: ['checkout_beta_4']
-    // });
-
-    // var checkoutButton = document.getElementById('checkout-button');
-    // checkoutButton.addEventListener('click', function () {
-    //     // When the customer clicks on the button, redirect
-    //     // them to Checkout.
-    //     stripe.redirectToCheckout({
-    //             items: [{
-    //                 plan: 'plan_EKvaCnNTY5rnPc',
-    //                 quantity: 1
-    //             }],
-
-    //             // Note that it is not guaranteed your customers will be redirected to this
-    //             // URL *100%* of the time, it's possible that they could e.g. close the
-    //             // tab between form submission and the redirect.
-    //             successUrl: 'http://projectmalin.me/success',
-    //             cancelUrl: 'http://projectmalin.me/canceled',
-    //         })
-    //         .then(function (result) {
-    //             if (result.error) {
-    //                 // If `redirectToCheckout` fails due to a browser or network
-    //                 // error, display the localized error message to your customer.
-    //                 var displayError = document.getElementById('error-message');
-    //                 displayError.textContent = result.error.message;
-    //             }
-    //         });
-    // });
-</script>
-
-
-
-<!-- DEPRECIATED Contact form section -->
-<!-- <div class="row" style="background:#2F4F4E">
-        <div class="col-md-4 col-sm-auto"></div>
-        <div class="col-md-4 col-sm-auto" style="text-align:center">
-            <br>
-            <h2 style="color:white">Contact Us</h2>
-            <form action="https://formspree.io/michaelliang15@gmail.com" method="POST">
-
-
-                <div class="mc-field-group" style="padding-left:10vh">
-                    <div class="md-form">
-                        <input type="text" value="" name="cu-name" class="required form-control"
-                            style="width:30vh;color:white">
-                        <label for="cu-name" style="color:white">Name</label>
-                    </div>
-                </div>
-                <div class="mc-field-group" style="padding-left:10vh">
-                    <div class="md-form">
-                        <input type="text" value="" name="cu-email" class="required form-control"
-                            style="width:30vh;color:white">
-                        <label for="cu-email" style="color:white">Email</label>
-                    </div>
-                </div>
-                <div class="mc-field-group" style="padding-left:10vh">
-                    <div class="md-form">
-                        <textarea type="text" name="cu-message" class="md-textarea form-control" rows="3"
-                            style="width:30vh;color:white"></textarea>
-                        <label for="cu-message" style="color:white">Message</label>
-                    </div>
-                </div>
-                <br>
-                <button class="btn btn-rounded" style="background: #26a69a">Submit</button>
-            </form>
-            <br>
-        </div>
-        <div class="col-md-4 col-sm-auto"></div>
-    </div> -->
-
-<!-- Mailing section
-    
-    
-                <!-- Begin Mailchimp Signup Form
-                <form
-                    action="https://azurewebsites.us19.list-manage.com/subscribe/post?u=00845a95e6ebcd24517ea7383&amp;id=1a662a599e"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate phoneMargin" novalidate>
-                    <!-- Material input
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME"
-                                style="width:30vh;color:white">
-                            <label for="mce-FNAME" style="color:white">First Name</label>
-                        </div>
-                    </div>
-                    <!-- Material input
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="text" value="" name="SOCIETY" class="required form-control" id="mce-SOCIETY"
-                                style="width:30vh;color:white">
-                            <label for="mce-SOCIETY" style="color:white">Society</label>
-                        </div>
-                    </div>
-                    <!-- Material input
-                    <div class="mc-field-group">
-                        <div class="md-form">
-                            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"
-                                style="color:white">
-                            <label for="mce-EMAIL" style="color:white">Email Address</label>
-                        </div>
-                    </div>
-
-                    <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                            name="b_00845a95e6ebcd24517ea7383_1a662a599e" tabindex="-1" value=""></div>
-
-                    <div style="text-align:center">
-                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                            class="btn btn-rounded" style="background: #26a69a;margin-bottom: 30px;">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-1 col-sm-auto"></div>
-    </div>
-    -->
+     
+                           

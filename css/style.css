@@ -104,7 +104,7 @@ html {
     font-size: 17px;
 }
 
-@media only screen and (max-width: 850px) { /* Only for screens above desktop width */
+@media only screen and (max-width: 1030px) { /* Only for screens above desktop width */
     #topnav {
         display: none;
     }
