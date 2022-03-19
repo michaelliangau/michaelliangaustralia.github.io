@@ -32,7 +32,7 @@ body {
 
 .feature ul li {
   padding-left: 2rem;
-  background-image: url(../../img/businessimg/check.svg);
+  background-image: url(../img/svg/check.svg);
   background-repeat: no-repeat;
   line-height: 1.5rem;
   margin-bottom: 1rem;
@@ -76,6 +76,10 @@ a {
 section {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.footer-link:hover {
+  color: white;
 }
 
 @media only screen and (max-width: 800px) { /* Only for screens above desktop width */
