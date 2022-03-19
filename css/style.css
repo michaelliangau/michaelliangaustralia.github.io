@@ -5,7 +5,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.gradient {
+.background-blue {
   background: rgb(0, 97, 242);
   background: linear-gradient(
     135deg,
@@ -47,14 +47,6 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.gallery {
-  background-color: white;
-}
-
-.gallery img {
-  border-radius: 5%;
 }
 
 .services {
